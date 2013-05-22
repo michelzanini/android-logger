@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+    <modelVersion>4.0.0</modelVersion>
+    
+	<groupId>com.github.michelzanini</groupId>
+	<artifactId>android-logger</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	
+	<name>Android Logger</name>
+	<description>Simple Log Wrapper over Android's Log class</description>
+	
+	<url>https://github.com/michelzanini/android-logger</url>
+	
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>michelzanini</id>
+			<name>Michel Zanini</name>
+			<email>michelzanini@gmail.com</email>
+		</developer>
+	</developers>
+	
+	<scm>
+		<connection>scm:git:https://github.com/michelzanini/android-logger.git</connection>
+		<url>https://github.com/michelzanini/android-logger</url>
+	</scm>
+	
+	<properties>
+		<java.version>1.6</java.version>
+		<android.platform.version>4.0.1.2</android.platform.version>
+		<maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
+		<maven.jar.plugin.version>2.4</maven.jar.plugin.version>
+		<maven.source.plugin.version>2.2.1</maven.source.plugin.version>
+		<maven.javadoc.plugin.version>2.9</maven.javadoc.plugin.version>
+	</properties>
+	
+    <dependencies>
+        
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>${android.platform.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven.jar.plugin.version}</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
+				</configuration>
+			</plugin>
+            
+            <plugin>
+		        <artifactId>maven-source-plugin</artifactId>
+		        <version>${maven.source.plugin.version}</version>
+		        <executions>
+		            <execution>
+			            <id>generate-sources</id>
+			            <phase>package</phase>
+			            <goals>
+			            	<goal>jar-no-fork</goal>
+			            </goals>
+	            	</execution>
+	            </executions>	
+		    </plugin>
+		    
+		    <plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${maven.javadoc.plugin.version}</version>
+				<executions>
+					<execution>
+						<id>generate-javadoc</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>
+    </build>
+	
+</project>
