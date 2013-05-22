@@ -2,6 +2,9 @@
 *.apk
 *.ap_
 
+# Mac
+.DS_Store
+
 # files for the dex VM
 *.dex
 
