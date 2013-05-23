@@ -1,4 +1,4 @@
-android-logger
+Android Logger
 ==============
 
 It is hard to work with log levels when using android.util.Log class.   
