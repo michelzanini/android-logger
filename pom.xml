@@ -41,6 +41,7 @@
 		<maven.jar.plugin.version>2.4</maven.jar.plugin.version>
 		<maven.source.plugin.version>2.2.1</maven.source.plugin.version>
 		<maven.javadoc.plugin.version>2.9</maven.javadoc.plugin.version>
+		<maven.assembly.plugin.version>2.4</maven.assembly.plugin.version>
 	</properties>
 	
     <dependencies>
@@ -102,6 +103,17 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+		    <plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven.assembly.plugin.version}</version>
+				<configuration>
+					<descriptors>
+		            	<descriptor>src/main/assembly/maven-central.xml</descriptor>
+		            </descriptors>
+				</configuration>
+			</plugin>
+		    
         </plugins>
     </build>
 	
