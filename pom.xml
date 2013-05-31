@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 	
 	<name>Android Logger</name>
-	<description>Simple Log Wrapper over Android's Log class</description>
+	<description>Simple Log Wrapper over android.util.Log class</description>
 	
 	<url>https://github.com/michelzanini/android-logger</url>
 	
