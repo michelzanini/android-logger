@@ -1,5 +1,4 @@
-Android Logger
-==============
+# Android Logger
 
 It is hard to work with log levels when using android.util.Log class.   
 The methods are short and not very readable, like Log.d, Log.e, etc... There aren`t many options to format the log.    
