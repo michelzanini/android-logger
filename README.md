@@ -47,3 +47,16 @@ if (logger.isDebugEnabled()) {
 }
 ```
 
+## How to get it
+
+[Download the bundle](http://michelzanini.github.io/android-logger/downloads/1.0.0/android-logger-1.0.0-dist.zip) or add it as a Maven dependency:
+
+```xml
+<dependency>
+   <groupId>com.michelzanini</groupId>
+   <artifactId>android-logger</artifactId>
+   <version>1.0.0</version>
+</dependency>
+```
+
+
