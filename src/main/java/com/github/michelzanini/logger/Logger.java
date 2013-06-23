@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.michelzanini.logger;
+package com.github.michelzanini.logger;
 
 /**
  * Provides all type of methods for logging to the console at any {@link LoggerLevel}.<br>
