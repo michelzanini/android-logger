@@ -55,7 +55,7 @@ if (logger.isDebugEnabled()) {
 
 ```xml
 <dependency>
-   <groupId>com.michelzanini</groupId>
+   <groupId>com.github.michelzanini</groupId>
    <artifactId>android-logger</artifactId>
    <version>1.0.0</version>
 </dependency>
