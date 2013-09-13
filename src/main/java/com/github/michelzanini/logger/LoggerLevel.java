@@ -49,5 +49,17 @@ public enum LoggerLevel {
 	public int getLevelAsInteger() {
 		return androidLevel;
 	}
+	
+	public static LoggerLevel getLoggerLevel(String levelString) {
+		
+		for (LoggerLevel level : values()) {
+			if (level.toString().equalsIgnoreCase(levelString)) {
+				return level;
+			}
+		}
+		
+		return NONE;
+	}
+	
 
 }

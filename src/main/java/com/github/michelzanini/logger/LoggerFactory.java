@@ -18,6 +18,8 @@ package com.github.michelzanini.logger;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.content.Context;
+
 /**
  * Used to produce {@link Logger} instances.
  * 
@@ -53,6 +55,28 @@ public class LoggerFactory {
 		if (loggerLevel != null) {
 			level = loggerLevel;
 		}
+	}
+	
+	/**
+	 * Sets the logger level based on a String
+	 * @param loggerLevelString string is the name of the logger level (enum name in String)
+	 */
+	public static void setLevelFromString(String loggerLevelString) {
+		LoggerLevel level = LoggerLevel.getLoggerLevel(loggerLevelString);
+		
+		if (level != LoggerLevel.NONE) {
+			setLevel(level);
+		}
+	}
+	
+	/**
+	 * Sets the logger level based on a String resource, taken from Android XML files
+	 * @param context The Android Context object. Can be either an Application object or an Activity
+	 * @param stringResourceId the R.string integer value to lookup the String on Android resources
+	 */
+	public static void setLevelFromStringResource(Context context, int stringResourceId) {
+		String loggerLevelString = context.getString(stringResourceId);
+		setLevelFromString(loggerLevelString);
 	}
 	
 	public static AndroidLogger getLogger(Class<?> clazz) {
