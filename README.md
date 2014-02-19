@@ -38,7 +38,16 @@ logger.error("Message", e);
 How to set the desired log level for logging (default is Level.INFO):
 
 ```java
+//log level constant from code
 LoggerFactory.setLevel(LoggerLevel.DEBUG);
+
+//log level constant from strings.xml
+LoggerFactory.setLevelFromStringResource(context, R.string.log_level);
+
+/*
+in the 'strings.xml' file
+<string name="log_level">DEBUG</string>
+*/
 ```
 
 How to filter log messages that can impact performance:
@@ -51,13 +60,13 @@ if (logger.isDebugEnabled()) {
 
 ## How to get it
 
-[Download the bundle](http://michelzanini.github.io/android-logger/downloads/1.0.0/android-logger-1.0.0-dist.zip) or add it as a Maven dependency:
+[Download the bundle](http://michelzanini.github.io/android-logger/downloads/1.0.1/android-logger-1.0.1-dist.zip) or add it as a Maven dependency:
 
 ```xml
 <dependency>
    <groupId>com.github.michelzanini</groupId>
    <artifactId>android-logger</artifactId>
-   <version>1.0.0</version>
+   <version>1.0.1</version>
 </dependency>
 ```
 
