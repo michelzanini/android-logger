@@ -2,14 +2,14 @@
 
 View the project's web site [here](http://michelzanini.github.io/android-logger).
 
-It is hard to work with log levels when using android.util.Log class.   
+It is hard to work with log levels when using <b>android.util.Log</b> class.   
 The methods are short and not very readable, like Log.d, Log.e, etc... There aren`t many options to format the log.    
 Also, there are a few bugs, like logging a null String will crash the app.    
 
-This project is a simple wrapper above the android.util.Log class. It is similar to Apache Commons Logging, as many may be used to.
+This project is a simple wrapper above the <b>android.util.Log</b> class. It is similar to Apache Commons Logging, as many may be used to.
 The log levels available are: verbose, debug, info, warn and error.
 
-This an example of how to obtain a Logger instance:
+This is an example of how to obtain a Logger instance:
 
 ```java
 //using a String as Log Tag
