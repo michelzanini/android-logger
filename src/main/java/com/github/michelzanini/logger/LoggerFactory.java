@@ -79,7 +79,7 @@ public class LoggerFactory {
 		setLevelFromString(loggerLevelString);
 	}
 	
-	public static AndroidLogger getLogger(Class<?> clazz) {
+	public static Logger getLogger(Class<?> clazz) {
 		String tag = null;
 		if (clazz != null) {
 			tag = clazz.getSimpleName();
@@ -87,7 +87,7 @@ public class LoggerFactory {
 		return getLogger(tag);
 	}
 	
-	public static AndroidLogger getLogger(String tag) {
+	public static Logger getLogger(String tag) {
 		AndroidLogger logger = null;
 		
 		synchronized (loggerCache) {
